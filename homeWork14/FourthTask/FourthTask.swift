@@ -11,6 +11,7 @@ import RealmSwift
 class Weather: Object {
     @objc dynamic var realmCityName = ""
     @objc dynamic var realmWeather = ""
+    
 }
 
 class FourthTask: UIViewController {
