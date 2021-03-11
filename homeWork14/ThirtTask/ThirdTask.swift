@@ -25,7 +25,6 @@ class ThirdTask: UIViewController {
         }
     }
     
-    
     override func viewDidLoad() {
         addButton.layer.borderWidth = 1
         addButton.layer.borderColor = UIColor.gray.cgColor
@@ -33,7 +32,10 @@ class ThirdTask: UIViewController {
     }
 }
 
+
 extension ThirdTask: UITableViewDataSource {
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tasks.count
     }
@@ -45,6 +47,7 @@ extension ThirdTask: UITableViewDataSource {
         let rows = tasks[indexPath.row]
         
         cell.tasksLabel?.text = rows.taskDescription
+        cell.selectionStyle = .none
         
         return cell
     }

@@ -46,7 +46,7 @@
                                 <rect key="frame" x="0.0" y="113" width="414" height="700"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ThirdTasksCell" id="c8Z-sX-wFw" customClass="ThirdTasksCell" customModule="homeWork14" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ThirdTasksCell" id="c8Z-sX-wFw" customClass="ThirdTasksCell" customModule="homeWork14" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c8Z-sX-wFw" id="IYM-9W-Sam">
@@ -54,20 +54,30 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCj-Pn-Xhc">
-                                                    <rect key="frame" x="20" y="11" width="374" height="21"/>
+                                                    <rect key="frame" x="20" y="11" width="334" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jw9-Mk-v1g">
+                                                    <rect key="frame" x="372" y="10" width="22" height="22.5"/>
+                                                    <state key="normal" backgroundImage="checkmark" catalog="system"/>
+                                                </button>
                                             </subviews>
+                                            <color key="tintColor" systemColor="systemGray2Color"/>
                                             <constraints>
+                                                <constraint firstItem="Jw9-Mk-v1g" firstAttribute="top" secondItem="IYM-9W-Sam" secondAttribute="top" constant="8" id="BZy-MQ-KsU"/>
+                                                <constraint firstAttribute="trailing" secondItem="Jw9-Mk-v1g" secondAttribute="trailing" constant="20" symbolic="YES" id="ENi-AE-ERb"/>
+                                                <constraint firstItem="Jw9-Mk-v1g" firstAttribute="leading" secondItem="YCj-Pn-Xhc" secondAttribute="trailing" constant="18" id="QJZ-1e-Jsl"/>
                                                 <constraint firstItem="YCj-Pn-Xhc" firstAttribute="top" secondItem="IYM-9W-Sam" secondAttribute="topMargin" id="eVe-Ex-iql"/>
+                                                <constraint firstAttribute="bottom" secondItem="Jw9-Mk-v1g" secondAttribute="bottom" constant="9" id="gtd-97-nZ5"/>
                                                 <constraint firstItem="YCj-Pn-Xhc" firstAttribute="leading" secondItem="IYM-9W-Sam" secondAttribute="leadingMargin" id="lMH-jB-61r"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="YCj-Pn-Xhc" secondAttribute="bottom" id="nNT-J9-8ov"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="YCj-Pn-Xhc" secondAttribute="trailing" id="tQo-TZ-OZb"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="YCj-Pn-Xhc" secondAttribute="trailing" constant="40" id="tQo-TZ-OZb"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="checkMarkLabel" destination="Jw9-Mk-v1g" id="tk5-Dv-F1w"/>
                                             <outlet property="tasksLabel" destination="YCj-Pn-Xhc" id="Dj4-KJ-Pg6"/>
                                         </connections>
                                     </tableViewCell>
@@ -114,14 +124,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TasksCell" id="5Gs-lc-1sj" customClass="TasksCell" customModule="homeWork14" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Gs-lc-1sj" id="ErI-h6-Qov">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YhG-Kz-SRx">
-                                                    <rect key="frame" x="20" y="11" width="374" height="21"/>
+                                                    <rect key="frame" x="20" y="11" width="374" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -308,9 +318,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
